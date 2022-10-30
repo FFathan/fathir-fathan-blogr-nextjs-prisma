@@ -50,46 +50,46 @@ const Header: React.FC = () => {
 
   let right = null;
 
-  if (status === "loading") {
-    left = (
-      <div className="left">
-        <Link href="/">
-          <a className="bold" data-active={isActive("/")}>
-            Feed
-          </a>
-        </Link>
-        <style jsx>{`
-          .bold {
-            font-weight: bold;
-          }
+  // if (status === "loading") {
+  //   left = (
+  //     <div className="left">
+  //       <Link href="/">
+  //         <a className="bold" data-active={isActive("/")}>
+  //           Feed
+  //         </a>
+  //       </Link>
+  //       <style jsx>{`
+  //         .bold {
+  //           font-weight: bold;
+  //         }
 
-          a {
-            text-decoration: none;
-            color: var(--geist-foreground);
-            display: inline-block;
-          }
+  //         a {
+  //           text-decoration: none;
+  //           color: var(--geist-foreground);
+  //           display: inline-block;
+  //         }
 
-          .left a[data-active="true"] {
-            color: gray;
-          }
+  //         .left a[data-active="true"] {
+  //           color: gray;
+  //         }
 
-          a + a {
-            margin-left: 1rem;
-          }
-        `}</style>
-      </div>
-    );
-    right = (
-      <div className="right">
-        <p>Validating session ...</p>
-        <style jsx>{`
-          .right {
-            margin-left: auto;
-          }
-        `}</style>
-      </div>
-    );
-  }
+  //         a + a {
+  //           margin-left: 1rem;
+  //         }
+  //       `}</style>
+  //     </div>
+  //   );
+  //   right = (
+  //     <div className="right">
+  //       <p>Validating session ...</p>
+  //       <style jsx>{`
+  //         .right {
+  //           margin-left: auto;
+  //         }
+  //       `}</style>
+  //     </div>
+  //   );
+  // }
 
   if (!session) {
     right = (
